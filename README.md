@@ -2,7 +2,7 @@
 
 ## 01_MNIST_keras_tf
 
-In the folder 01_MNIST_keras_tf can find a step by step of how to create a model (in keras and TensorFlow) to classify numbers from MNIST database.
+In the folder 01_MNIST_keras_tf can find a step by step about how to create a model (in keras and TensorFlow) to classify numbers from MNIST database.
 
 Also, there are in the folder, notebooks to save, freeze and optimize the model created with TensorFlow and to load and test each one.
 
@@ -16,15 +16,17 @@ Also, there are in the folder, notebooks to save, freeze and optimize the model 
 * [02_06_MNIST_load_optimized.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/02_06_MNIST_load_optimized.ipynb) - load, run and test the optimized model
 
 
-time average in ms for the TensorFlow models
-
-batch 4: 100 runs with batch of 4
-
-batch 1000: 1000 runs with batch of 1000
 
 
-Time in ms | batch: 4 | batch: 1000
---- | --- | --- 
-model | 1.9872 | 21.357 
-frozen | 1.2127 | 6.9343 
-optimized | 1.2175 | 6.5938 
+
+### Performance 
+
+Each model ran 100 times for each batch size, in the table is shown the mean time
+
+Model | Batch size: 4 | Batch size: 8 | Batch size: 16 | Batch size: 32 | Batch size: 64 | Batch size: 128 | Batch size: 256
+--- | --- | --- | --- | --- | --- | --- | --- 
+Original | 1.2044 | 1.0468 | 0.9961 | 1.0201 | 1.3075 | 1.6875 | 2.4400
+Frozen | 1.9521 | 1.9812 | 2.4692 | 2.7717 | 3.2804 | 4.2291 | 7.1155
+Optimized | 2.0656 | 2.0757 | 2.3632 | 2.8455 | 3.3992 | 4.0596 | 6.5692
+
+*time in ms
