@@ -24,6 +24,11 @@ Also, there are in the folder, notebooks to save, freeze and optimize the model 
 Each model ran 100 times for each batch size, in the table is shown the mean time
 
 
+
+
+
+HOME
+
 Model | Batch size: 4 | Batch size: 8 | Batch size: 16 | Batch size: 32 | Batch size: 64 | Batch size: 128 | Batch size: 256
 --- | --- | --- | --- | --- | --- | --- | --- 
 Original | 1.8957 | 1.9569 | 2.3272 | 2.8502 | 3.2982 | 3.9983 | 6.3863
@@ -31,6 +36,26 @@ Frozen | 1.1339 | 1.0290 | 1.0152 | 1.0652 | 1.3136 | 1.7029 | 2.4653
 Optimized | 1.7687 | 1.8855 | 1.9876 | 2.3957 | 3.0059 | 4.0875 | 6.7858
 
 *time in ms
+
+
+
+
+
+LAB
+
+Model | Batch size: 4 | Batch size: 8 | Batch size: 16 | Batch size: 32 | Batch size: 64 | Batch size: 128 | Batch size: 256
+--- | --- | --- | --- | --- | --- | --- | --- 
+Original | 1.3526 | 1.3545 | 1.3224 | 1.4362 | 1.5194 | 1.8309 | 2.6987
+Frozen | 1.1405 | 0.9183 | 0.9599 | 1.0250 | 1.2222 | 1.6710 | 2.4740
+Optimized | 1.5687 | 1.5817 | 1.9562 | 2.2139 | 2.8684 | 4.0093 | 6.6882
+
+*time in ms
+
+
+
+
+
+
 
 
 old
