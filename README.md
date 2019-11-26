@@ -1,69 +1,60 @@
 # DeploymentGuide
 
-## 01_MNIST_keras_tf
+## 01_MNIST_keras
 
-In the folder 01_MNIST_keras_tf can find a step by step about how to create a model (in keras and TensorFlow) to classify numbers from MNIST database.
+In the folder 01_MNIST_keras can find a step by step about how to create a model (in keras) to classify numbers from MNIST database.
+
+Also, there are in the folder, notebooks to save, freeze and optimize the model created with Keras and to load and test each one.
+
+It is showed two tables, one with the mean time for the runs, and the second table is the mean time value divided by the batch size
+
+
+## Performance 100 runs
+
+Each model ran 100 times for each batch size, in the table is shown the mean time in ms
+
+
+#### Entire batch 
+
+Batch size | 4 | 8 | 16 | 32 | 64 | 128 | 256
+--- | --- | --- | --- | --- | --- | --- | --- 
+Model | 1.9033 | 2.0848 | 2.3796 | 2.8857 | 5.4737 | 10.6925 | 20.8453
+Frozen | 2.1116 | 1.6207 | 2.1041 | 2.6438 | 3.4164 | 4.5768 | 7.1868
+Optimized | 2.1955 | 1.5326 | 1.7250 | 2.1402 | 2.8448 | 4.3492 | 6.9089
+
+#### /batch size
+
+Batch size | 4 | 8 | 16 | 32 | 64 | 128 | 256
+--- | --- | --- | --- | --- | --- | --- | --- 
+Model | 0.4758 | 0.2606 | 0.1487 | 0.0902 | 0.0855 | 0.0835 | 0.0814
+Frozen | 0.5279 | 0.2026 | 0.1315 | 0.0826 | 0.0534 | 0.0358 | 0.0281
+Optimized | 0.5489 | 0.1916 | 0.1078 | 0.0669 | 0.0445 | 0.0340 | 0.0270
+
+
+## 01_MNIST_tensorflow
+
+In the folder 01_MNIST_tensorflow can find a step by step about how to create a model (in TensorFlow) to classify numbers from MNIST database.
 
 Also, there are in the folder, notebooks to save, freeze and optimize the model created with TensorFlow and to load and test each one.
 
-* [01_MNIST_keras.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/01_MNIST_keras.ipynb) - create a model with Keras
-* [02_00_MNIST_tensorflow.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/02_00_MNIST_tensorflow.ipynb) - create a model with TensorFlow
-* [02_01_MNIST_save.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/02_01_MNIST_save.ipynb) - create a model with TensorFlow and save
-* [02_02_MNIST_Freezing.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/02_02_MNIST_Freezing.ipynb) - Freeze the TensorFlow model created
-* [02_03_MNIST_optimization.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/02_03_MNIST_optimization.ipynb) - Optimize the frozen model 
-* [02_04_MNIST_load_model.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/02_04_MNIST_load_model.ipynb) - load, run and test the TensorFlow model created
-* [02_05_MNIST_load_Frozen.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/02_05_MNIST_load_Frozen.ipynb) - load, run and test the frozen model
-* [02_06_MNIST_load_optimized.ipynb](https://github.com/joseruiz1989/DeploymentGuide/blob/master/01_MNIST_keras_tf/02_06_MNIST_load_optimized.ipynb) - load, run and test the optimized model
+
+## Performance 100 runs
+
+Each model ran 100 times for each batch size, in the table is shown the mean time in ms
 
 
+#### Entire batch 
 
-
-
-### Performance 
-
-Each model ran 100 times for each batch size, in the table is shown the mean time
-
-
-
-
-
-HOME
-
-Model | Batch size: 4 | Batch size: 8 | Batch size: 16 | Batch size: 32 | Batch size: 64 | Batch size: 128 | Batch size: 256
+Batch size | 4 | 8 | 16 | 32 | 64 | 128 | 256
 --- | --- | --- | --- | --- | --- | --- | --- 
-Original | 1.8957 | 1.9569 | 2.3272 | 2.8502 | 3.2982 | 3.9983 | 6.3863
-Frozen | 1.1339 | 1.0290 | 1.0152 | 1.0652 | 1.3136 | 1.7029 | 2.4653
-Optimized | 1.7687 | 1.8855 | 1.9876 | 2.3957 | 3.0059 | 4.0875 | 6.7858
+Model | 2.2705 | 2.2624 | 2.6087 | 2.9381 | 3.6173 | 4.4693 | 7.6755
+Frozen | 2.7985 | 1.7355 | 1.9956 | 2.3808 | 2.9216 | 4.0797 | 7.1339
+Optimized | 2.9318 | 1.6503 | 2.0097 | 2.2474 | 2.9278 | 4.0801 | 7.1074
 
-*time in ms
+#### /batch size
 
-
-
-
-
-LAB
-
-Model | Batch size: 4 | Batch size: 8 | Batch size: 16 | Batch size: 32 | Batch size: 64 | Batch size: 128 | Batch size: 256
+Batch size | 4 | 8 | 16 | 32 | 64 | 128 | 256
 --- | --- | --- | --- | --- | --- | --- | --- 
-Original | 1.3526 | 1.3545 | 1.3224 | 1.4362 | 1.5194 | 1.8309 | 2.6987
-Frozen | 1.1405 | 0.9183 | 0.9599 | 1.0250 | 1.2222 | 1.6710 | 2.4740
-Optimized | 1.5687 | 1.5817 | 1.9562 | 2.2139 | 2.8684 | 4.0093 | 6.6882
-
-*time in ms
-
-
-
-
-
-
-
-
-old
-
-Model | Batch size: 4 | Batch size: 8 | Batch size: 16 | Batch size: 32 | Batch size: 64 | Batch size: 128 | Batch size: 256
---- | --- | --- | --- | --- | --- | --- | --- 
-Original | 1.2044 | 1.0468 | 0.9961 | 1.0201 | 1.3075 | 1.6875 | 2.4400
-Frozen | 1.9521 | 1.9812 | 2.4692 | 2.7717 | 3.2804 | 4.2291 | 7.1155
-Optimized | 2.0656 | 2.0757 | 2.3632 | 2.8455 | 3.3992 | 4.0596 | 6.5692
-
-*time in ms
+Model | 0.5676 | 0.2828 | 0.1630 | 0.0918 | 0.0565 | 0.0349 | 0.0300
+Frozen | 0.6996 | 0.2169 | 0.1247 | 0.0744 | 0.0456 | 0.0319 | 0.0279
+Optimized | 0.7329 | 0.2063 | 0.1256 | 0.0702 | 0.0457 | 0.0319 | 0.0278
