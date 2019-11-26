@@ -9,7 +9,7 @@ Also, there are in the folder, notebooks to save, freeze and optimize the model 
 It is showed two tables, one with the mean time for the runs, and the second table is the mean time value divided by the batch size
 
 
-## Performance 100 runs
+### Performance 100 runs
 
 Each model ran 100 times for each batch size, in the table is shown the mean time in ms
 
@@ -38,7 +38,7 @@ In the folder 01_MNIST_tensorflow can find a step by step about how to create a 
 Also, there are in the folder, notebooks to save, freeze and optimize the model created with TensorFlow and to load and test each one.
 
 
-## Performance 100 runs
+### Performance 100 runs
 
 Each model ran 100 times for each batch size, in the table is shown the mean time in ms
 
